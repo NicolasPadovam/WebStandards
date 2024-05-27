@@ -1,0 +1,232 @@
+/********************************** Variáveis **********************************/
+:root {
+    --color-light: #fff;
+    --color-dark: #000;
+    --color-pink: #dc143c;
+    --transition: .5s;
+}
+
+/********************************** Regras Gerais **********************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior:     smooth;
+}
+
+
+ul,ol {
+    list-style: none;
+}
+
+a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-pink);
+}
+
+
+img {
+    max-width: 100%;
+
+}
+
+/********************************** Fim Regras Gerais **********************************/
+
+/********************************** Container - 01**********************************/
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)),
+        url(../images/pexels-felix-mittermeier-957002.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+
+}
+
+.header-page {
+    width: 100%;
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    /* background-color:rgb(4, 109, 109); */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-page h1 {
+    color: var(--color-light)
+}
+
+
+.span-logo {
+    background-color: var(--color-pink);
+    padding: 5px;
+    border-radius: 10px 0px 10px 0px;
+}
+
+.header-page ul {
+    display: flex;
+    gap: 20px;
+
+}
+
+
+/********************************* Fim Container 01 - ************************************/
+
+/********************************* Hero  ************************************/
+.hero {
+    width: 100%;
+    height: calc(100vh - 100px);
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 6vmin;
+}
+
+.hero h3 {
+    font-size: 4vmin;
+}
+
+.btn {
+    border: 2px solid var(--color-pink);
+    background-color: var(--color-pink);
+    padding: 8px 30px;
+    border-radius: 75px;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--color-light);
+}
+
+
+/******************************* Fim Hero  **********************************/
+
+
+/****************************** Cards *********************************/
+.cards {
+    width: 90%;
+    min-height: 100vh;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.cards h2 {
+    margin: 30px 0;
+}
+
+.cards-list {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-item {
+    width: 40%;
+    margin: 30px;
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 1px 1px 30px #ccc;
+    border-radius: 10px;
+    transition: scale .5s;
+}
+
+.card-item:hover {
+    scale: 1.1;
+}
+
+.card-item img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.card-item p {
+    width: 70%;
+    text-wrap: balance;
+    font-size: 15px;
+    color: #333;
+}
+
+.card-item .btn:hover {
+    border-color: var(--color-pink);
+    color: var(--color-pink);
+}
+
+
+
+
+/**************************** Fim Cards *******************************/
+
+/********************* criando os boxes de conteudo *********************/
+
+
+.box {
+width: 100%;
+min-height: 100vh;
+color: var(--color-light);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 30px;
+}
+
+.gastronomia, .contato {
+    background-color: var(--color-dark);
+}
+
+.suite {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)), 
+    url(../images/suite.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pensando no responsivo - parte 1 */
+@media(max-width: 980px) {
+
+    .card-item {
+        width: 80%;
+    }
+}
